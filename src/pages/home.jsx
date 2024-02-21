@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "../components/card";
 import { Form } from "../components/form";
-import { requist } from "../components/requist";
+import requist from "../components/requist";
 const url = "http://localhost:3000/todoList";
 
 export const Home = () => {
@@ -19,7 +19,7 @@ export const Home = () => {
     getData();
   }, []);
   return (
-    <div>
+    <div className=" max-w-[1200px] mx-auto">
       <Form getData={getData} />
       {loading ? (
         <h2>Loading...</h2>

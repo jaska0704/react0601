@@ -1,8 +1,6 @@
 import React from "react";
 const url = "http://localhost:3000/todoList";
 
-
-
 export const Form = ({ getData }) => {
   const [input, setInput] = React.useState({ name: "", email: "" });
   const changeInput = (e) => {
@@ -29,9 +27,10 @@ export const Form = ({ getData }) => {
   };
 
   return (
-    <form onSubmit={submit}>
+    <form className=" flex justify-center gap-4" onSubmit={submit}>
       <div>
         <input
+          className=" border-2 border-gray-500 px-9 py-2 rounded-xl"
           onChange={changeInput}
           value={input.name}
           name="name"
@@ -40,6 +39,7 @@ export const Form = ({ getData }) => {
       </div>
       <div>
         <input
+          className=" border-2 border-gray-500 px-9 py-2 rounded-xl"
           onChange={changeInput}
           value={input.email}
           type="email"
@@ -47,7 +47,7 @@ export const Form = ({ getData }) => {
           id=""
         />
       </div>
-      <button>send</button>
+      <button className=" px-7 py-2 bg-green-400 rounded-xl">send</button>
     </form>
   );
 };
